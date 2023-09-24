@@ -1,4 +1,4 @@
-// import '@total-typescript/ts-reset/json-parse'
+import '@total-typescript/ts-reset/json-parse'
 
 export const result = JSON.parse('{}');
 

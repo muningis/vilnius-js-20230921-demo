@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { SafeFetch } from "./safe-fetch";
 import { ZodError } from "zod";
 
+/**
+ * @description Hook intended to call fetch created with `safeFetch`. In real world scenario, react-query, react-router or something similar should be used.
+ */
 export function useSafeFetch<T extends {}>(safeFetch: SafeFetch<T>) {
   const [data, setData] = useState<T>();
   const [state, setState] = useState<"idle" | "loading">("idle");

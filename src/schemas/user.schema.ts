@@ -3,7 +3,7 @@ import { z } from "zod";
 export const userSchema = z.object({
   id: z.number(),
   name: z.string(),
-  username: z.string(),
+  username: z.string().regex(/\d{3}/, "errors.username.must_have_digits"),
   email: z.string().email(),
   address: z.object({
     street: z.string(),
